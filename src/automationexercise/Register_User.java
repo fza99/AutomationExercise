@@ -38,14 +38,12 @@ public class Register_User {
 	    			
 				    System.out.println(actualUrl.contains(expectedUrl));
 	    		}
-	            // Assuming you have some validation logic to check the presence of elements on the home page
 
 	            // Test Case 4: Click on 'Signup / Login' button
 	            WebElement signupLoginButton = driver.findElement(By.xpath("/html/body/header/div/div/div/div[2]/div/ul/li[4]/a/i"));
 	            signupLoginButton.click();
 
 	            // Test Case 5: Verify 'New User Signup!' is visible
-	            // Assuming you have some validation logic to check the presence of 'New User Signup!' element
 
 	            // Test Case 6: Enter name and email address
 	            WebElement nameInput = driver.findElement(By.xpath("/html/body/section/div/div/div[3]/div/form/input[2]"));
