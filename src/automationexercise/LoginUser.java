@@ -4,10 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Login_User {
+public class LoginUser {
  
-    @SuppressWarnings("unlikely-arg-type")
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // Set the path to the ChromeDriver executable
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\chromedriver_win32\\chromedriver.exe");
 
@@ -41,13 +40,13 @@ public class Login_User {
 
             // Test Case 5: Verify 'Login to your account' is visible
             WebElement loginText = driver.findElement(By.xpath("/html/body/section/div/div/div[1]/div/h2"));
-            if(loginText.equals("Login to your account")) {
+            if(loginText.getText().equals("Login to your account")) {
             	
-            	System.out.println("Login to your account' is visible");
+            	System.out.println("Login to your account is visible");
             } 
             else {
             	
-            	System.out.println("Login to your account' is not visible");
+            	System.out.println("Login to your account is not visible");
             }
 
             // Test Case 6: Enter correct email address and password
