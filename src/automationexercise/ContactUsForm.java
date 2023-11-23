@@ -1,10 +1,8 @@
 package automationexercise;
-import java.io.File;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ContactUsForm {
 	
@@ -16,6 +14,7 @@ public class ContactUsForm {
         WebDriver driver = new ChromeDriver();
 
         try {
+        	
             // Test Case 1: Launch browser
             // Assuming the browser is launched automatically when WebDriver is initialized
 
@@ -40,7 +39,6 @@ public class ContactUsForm {
     		contactUsButton.click();
     		
     		// Test Case 5: Verify 'GET IN TOUCH' is visible
-    		
     		WebElement getInTouch = driver.findElement(By.xpath("//*[@id=\"contact-page\"]/div[2]/div[1]/div/h2"));
     		
     		if (getInTouch.getText().equals("GET IN TOUCH")) {
@@ -76,7 +74,6 @@ public class ContactUsForm {
     		driver.switchTo().alert().accept();
     		
     		// Test Case 10 : Verify success message 'Success! Your details have been submitted successfully.' is visible
-    		
     		WebElement successMessage = driver.findElement(By.xpath("//*[@id=\"contact-page\"]/div[2]/div[1]/div/div[2]"));
     		
     		if (successMessage.getText().equals("Success! Your details have been submitted successfully.")) {
